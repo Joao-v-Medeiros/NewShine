@@ -1,0 +1,231 @@
+.precos-section {
+  position: relative;
+  z-index: 10;
+  padding: var(--section-padding);
+}
+
+.precos-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.precos-header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.precos-label {
+  color: var(--color-cyan);
+  font-size: 1.1rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  display: block;
+}
+
+.precos-title {
+  color: var(--color-white);
+  font-weight: 900;
+  font-size: clamp(4rem, 7vw, 7rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0 0 1.5rem;
+}
+
+.precos-divider {
+  width: 100px;
+  height: 4px;
+  background: var(--color-cyan);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+  align-items: start;
+}
+
+.plano-card {
+  position: relative;
+  border-radius: 28px;
+  padding: 3.5rem 3rem;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  cursor: default;
+  min-height: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.plano-card:not(.plano-card-highlight):hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 60px rgba(0, 194, 255, 0.25);
+  border-color: var(--color-cyan) !important;
+}
+
+.plano-card-highlight {
+  animation: borderPulse 2.2s ease-in-out infinite;
+  transform: scale(1.05);
+}
+
+.plano-badge {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-cyan);
+  color: #000;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 6px 24px;
+  border-radius: 999px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.plano-name {
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.plano-name-highlight { color: var(--color-cyan); }
+.plano-name-dim       { color: rgba(255, 255, 255, 0.6); }
+
+.plano-price {
+  color: white;
+  font-weight: 900;
+  font-size: 5.5rem;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.plano-desc {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1.15rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.plano-items {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  flex: 1;
+}
+
+.plano-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1.15rem;
+}
+
+.plano-item-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.plano-item-dot-highlight { background: var(--color-cyan); }
+.plano-item-dot-dim       { background: rgba(255,255,255,0.25); }
+
+.plano-btn {
+  width: 100%;
+  padding: 1.3rem;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: var(--font-main);
+}
+
+.plano-btn-highlight {
+  background: var(--color-cyan);
+  color: #000;
+  border: none;
+}
+
+.plano-btn-highlight:hover {
+  background: white;
+  transform: scale(1.02);
+}
+
+.plano-btn-dim {
+  background: transparent;
+  color: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.plano-btn-dim:hover {
+  border-color: var(--color-cyan);
+  color: var(--color-cyan);
+}
+
+/* Serviços Avulsos */
+.avulsos-container {
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.02);
+  padding: 3.5rem 4rem;
+}
+
+.avulsos-title {
+  color: rgba(255,255,255,0.4);
+  font-size: 0.9rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.avulso-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  transition: all 0.2s;
+}
+
+.avulso-row:hover {
+  padding-left: 0.5rem;
+}
+
+.avulso-row:first-of-type { border-top: none; }
+
+.avulso-name  { color: rgba(255,255,255,0.65); font-size: 1.25rem; }
+.avulso-price { color: var(--color-cyan); font-weight: 700; font-size: 1.5rem; }
+
+.avulsos-footer {
+  color: rgba(255,255,255,0.2);
+  font-size: 0.9rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  .plans-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 700px) {
+  .plans-grid { grid-template-columns: 1fr; }
+  .plano-card-highlight { transform: none; }
+  .avulsos-container { padding: 2rem; }
+}

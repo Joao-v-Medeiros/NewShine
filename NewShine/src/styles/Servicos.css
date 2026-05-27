@@ -1,0 +1,117 @@
+.servicos-section {
+  position: relative;
+  z-index: 10;
+  padding: var(--section-padding);
+}
+
+.servicos-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.servicos-header {
+  margin-bottom: 4rem;
+}
+
+.servicos-label {
+  color: var(--color-cyan);
+  font-size: 0.875rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  display: block;
+}
+
+.servicos-title {
+  color: var(--color-white);
+  font-weight: 900;
+  font-size: clamp(3rem, 5vw, 5rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0 0 1.25rem;
+}
+
+.servicos-divider {
+  width: 80px;
+  height: 3px;
+  background: var(--color-cyan);
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
+
+.service-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 360px;
+  cursor: default;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+}
+
+.service-card:hover {
+  transform: scale(1.025);
+  box-shadow: 0 0 50px rgba(0, 194, 255, 0.18);
+}
+
+.service-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.45) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  z-index: 1;
+}
+
+.service-card-icon {
+  position: absolute;
+  top: 1.75rem;
+  left: 1.75rem;
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+}
+
+.service-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem 2.25rem;
+}
+
+.service-card-title {
+  color: white;
+  font-weight: 900;
+  font-size: 2rem;
+  margin: 0 0 0.6rem;
+  line-height: 1.1;
+}
+
+.service-card-desc {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .servicos-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-card {
+    min-height: 300px;
+  }
+}
+
