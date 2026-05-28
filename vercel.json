@@ -1,5 +1,4 @@
- {
-  "rootDirectory": "NewShine",
+{
   "rewrites": [{
     "source": "/(.*)",
     "destination": "/"
